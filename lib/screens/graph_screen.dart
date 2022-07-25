@@ -6,15 +6,14 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
-import 'package:stock_market/components/prediction.dart';
-import 'package:stock_market/components/read_data.dart';
+import 'package:stock_market/components/secondary/prediction.dart';
+import 'package:stock_market/components/secondary/read_data.dart';
 import 'package:stock_market/model/history.dart';
 import 'package:stock_market/provider/limit_provider.dart';
-import 'package:stock_market/screens/app_bar.dart';
+import 'package:stock_market/components/appbar/app_bar.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 import 'package:http/http.dart' as http;
-import '../controller/history_controller.dart';
 
 class GraphScreen extends StatefulWidget {
   final String id;
@@ -244,30 +243,7 @@ class _GraphScreenState extends State<GraphScreen> {
             const SizedBox(
               height: 12,
             ),
-            // const Padding(
-            //   padding: const EdgeInsets.all(18.0),
-            //   child: Text(
-            //     "Predict",
-            //     style: TextStyle(
-            //         fontSize: 22,
-            //         fontWeight: FontWeight.w600,
-            //         color: Colors.black87),
-            //   ),
-            // ),
-            // Row(
-            //   children: [
-            //     ListTile(
-            //       leading: Container(
-            //         height: 50,
-            //         width: 50,
-            //         child: Center(child: Icon(Icons.arrow_upward_outlined)),
-            //         decoration: BoxDecoration(
 
-            //             border: Border.all(color: Colors.black45)),
-            //       ),
-            //     )
-            //   ],
-            // )
             predictionScreen(
               id: widget.id,
               name: widget.name,
@@ -291,7 +267,7 @@ Future<void> showBottomSheetx(context, name) {
   return showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Container(
+        return SizedBox(
           height: 400,
           child: Center(child: ReadData(name: name)),
         );

@@ -1,18 +1,3 @@
-// class PriceHistory {
-//   final String price;
-//   final num timestamp;
-
-//   PriceHistory({required this.price, required this.timestamp});
-
-//   factory PriceHistory.fromJson(Map<String, dynamic> parsedJson) {
-//     return PriceHistory(
-//       price: parsedJson["price"],
-//       timestamp: parsedJson["timestamp"],
-//     );
-//   }
-// }
-
-
 
 import 'dart:convert';
 

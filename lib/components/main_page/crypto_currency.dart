@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:intl/intl.dart';
 import 'package:stock_market/screens/graph_screen.dart';
 
-import '../model/price_modal.dart';
+import '../../model/price_modal.dart';
 
 class CryptoCurrency extends StatelessWidget {
   final Coin coin;

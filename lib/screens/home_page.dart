@@ -3,9 +3,9 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:stock_market/screens/graph_screen.dart';
 
-import 'screens/app_bar.dart';
-import 'screens/crypto_list.dart';
-import 'screens/wallets.dart';
+import '../components/appbar/app_bar.dart';
+import '../components/main_page/crypto_list.dart';
+import '../components/wallets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);

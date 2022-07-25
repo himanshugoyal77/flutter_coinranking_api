@@ -42,7 +42,7 @@ class _ReadDataState extends State<ReadData> {
           }
 
           return Container(
-              child: addi(snapshot.data!).isNotEmpty
+              child: addElement(snapshot.data!).isNotEmpty
                   ? Center(
                       child: Container(
                         child: SfCircularChart(
@@ -70,9 +70,7 @@ class _ReadDataState extends State<ReadData> {
                       ),
                     )
                   : Text(cDown.toString())
-              //  snapshot.data!.docs
-              //     .map((document) => displayData(document, context))
-              //     .toList(),
+            
               );
         },
       ),
@@ -84,7 +82,7 @@ List<ChartData> res = [];
 int cUp = 0;
 int cDown = 0;
 
-List addi(QuerySnapshot<Object?> doc) {
+List addElement(QuerySnapshot<Object?> doc) {
   for (int i = 0; i < doc.size; i++) {
     if (doc.docs[i]["up"] == 1) {
       cUp++;
@@ -100,30 +98,6 @@ List addi(QuerySnapshot<Object?> doc) {
   print(cDown);
 
   return [cUp, cDown];
-}
-
-Widget displayData(document, context) {
-  final controller = Provider.of<LimitProvider>(context).ups;
-  return SingleChildScrollView(
-    child: Column(
-        children: func(document, context)
-            ? [
-                Text(cUp.toString()),
-              ]
-            : []),
-  );
-}
-
-bool func(doc, context) {
-  if (doc["up"] == 1) {
-    cUp++;
-    return true;
-  }
-  if (doc["down"] == 1) {
-    cDown++;
-    return false;
-  }
-  return false;
 }
 
 class ChartData {

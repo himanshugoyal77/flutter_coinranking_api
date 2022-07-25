@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:stock_market/components/crypto_currency.dart';
+import 'package:stock_market/components/main_page/crypto_currency.dart';
 import 'package:stock_market/controller/api_controller.dart';
 import 'package:stock_market/model/price_modal.dart';
 
