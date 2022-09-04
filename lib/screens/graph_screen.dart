@@ -46,7 +46,7 @@ class _GraphScreenState extends State<GraphScreen> {
         headers: {
           "Content-Type": "application/json",
           'X-RapidAPI-Key':
-              '5f506045admsh19d29b93bba57d7p1a7e0djsne0bcbd6bbb86',
+              'YOUR RAPIDAPI KEY HERE',
         });
 
     if (response.statusCode == 200) {
