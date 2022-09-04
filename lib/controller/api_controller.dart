@@ -8,7 +8,7 @@ class CryptoApi {
 
   static const Map<String, String> headers = {
     "Content-Type": "application/json",
-    "X-RapidAPI-Key": "5f506045admsh19d29b93bba57d7p1a7e0djsne0bcbd6bbb86",
+    "X-RapidAPI-Key": "YOUR RAPIDAPI KEY HERE",
   };
 
   static Future<List<Coin>> getCoins() async {
